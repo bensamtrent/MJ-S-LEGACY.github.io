@@ -21,7 +21,7 @@ const n=cart.reduce((a,c)=>a+c.n,0),t=cart.reduce((a,c)=>a+c.n*pr(c),0);
 $("cnt").textContent=n;$("tot").textContent=R(t);
 $("items").innerHTML=cart.length?cart.map((c,k)=>`<div class="it"><div><b>${nm(c)}</b><br>${c.n} × ${R(pr(c))}</div><div style="text-align:right">${R(c.n*pr(c))}<br><button data-r="${k}">Remove</button></div></div>`).join(""):"<p>Your cart is empty. Pick a size to get started.</p>";
 const msg="Hi, I want to order: "+cart.map(c=>`${nm(c)} x${c.n}`).join(", ")+`. Total ${R(t)}`;
-$("wa").href="https://wa.me/919989029028?text="+encodeURIComponent(msg);
+$("wa").href="https://wa.me/919010379552?text="+encodeURIComponent(msg);
 $("wa").style.display=cart.length?"block":"none";
 }
 function add(i,n){const f=cart.find(c=>c.p==pi&&c.i==i);f?f.n+=n:cart.push({p:pi,i,n});cartUI();tog(true)}
